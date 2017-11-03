@@ -10,7 +10,7 @@ import {
 
 const TextInput = (props) => (
   <FormGroup controlId={ "formHorizontal" + props.input.replace(" ","") }>
-    <Col componentClass={ControlLabel} sm={2}>
+    <Col componentClass={ControlLabel} sm={2} smOffset={3}>
       { props.input }
     </Col>
     <Col sm={4}>

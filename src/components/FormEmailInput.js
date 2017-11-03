@@ -10,7 +10,7 @@ import {
 
 const EmailInput = () => (
   <FormGroup controlId="formHorizontalEmail">
-    <Col componentClass={ControlLabel} sm={2}>
+    <Col componentClass={ControlLabel} sm={2} smOffset={3}>
       Email
     </Col>
     <Col sm={4}>

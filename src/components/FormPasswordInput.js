@@ -10,7 +10,7 @@ import {
 
 const PasswordInput = (props) => (
   <FormGroup controlId="formHorizontalPassword">
-    <Col componentClass={ControlLabel} sm={2}>
+    <Col componentClass={ControlLabel} sm={2} smOffset={3}>
       Password
     </Col>
     <Col sm={4}>
