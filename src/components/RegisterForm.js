@@ -24,7 +24,11 @@ import PasswordInput from './FormPasswordInput';
 const RegisterForm = () => (
   <div className="form-wrapper">
     <Form horizontal className="centered-form">
-      <h3>Register with the NYT Coding Challenge</h3>
+      <FormGroup>
+        <Col smOffset={4} sm={8}>
+          <h3>Register with the NYT Coding Challenge</h3>
+        </Col>
+      </FormGroup>
       <TextInput input={ "First Name" }/>
       <TextInput input={ "Last Name" }/>
       <TextInput input={ "Username" }/>
