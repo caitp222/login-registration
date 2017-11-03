@@ -26,3 +26,13 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.form-container {
+  display: flex;
+  height: 100%;
+}
+
+.centered-form {
+  margin: auto;
+  width: 100%;
+}

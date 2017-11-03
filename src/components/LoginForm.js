@@ -11,40 +11,34 @@ import {
   Button
 } from 'react-bootstrap';
 
+// components
+import TextInput from './FormTextInput'
+import PasswordInput from './FormPasswordInput'
+
 const LoginForm = () => (
-  <Form horizontal>
-    <FormGroup controlId="formHorizontalEmail">
-      <Col componentClass={ControlLabel} sm={2}>
-        Email
-      </Col>
-      <Col sm={10}>
-        <FormControl type="email" placeholder="Email" />
-      </Col>
-    </FormGroup>
+  <div>
+    <h3>Welcome to the NYT Coding Challenge</h3>
+    <div className="form-container">
+      <Form horizontal className="centered-form">
+        <TextInput input={ "Username" }/>
+        <PasswordInput />
 
-    <FormGroup controlId="formHorizontalPassword">
-      <Col componentClass={ControlLabel} sm={2}>
-        Password
-      </Col>
-      <Col sm={10}>
-        <FormControl type="password" placeholder="Password" />
-      </Col>
-    </FormGroup>
+        <FormGroup>
+          <Col smOffset={2} sm={10}>
+            <Checkbox>Remember me</Checkbox>
+          </Col>
+        </FormGroup>
 
-    <FormGroup>
-      <Col smOffset={2} sm={10}>
-        <Checkbox>Remember me</Checkbox>
-      </Col>
-    </FormGroup>
-
-    <FormGroup>
-      <Col smOffset={2} sm={10}>
-        <Button type="submit">
-          Sign in
-        </Button>
-      </Col>
-    </FormGroup>
-  </Form>
+        <FormGroup>
+          <Col smOffset={2} sm={10}>
+            <Button type="submit">
+              Sign in
+            </Button>
+          </Col>
+        </FormGroup>
+      </Form>
+    </div>
+  </div>
 )
 
 export default LoginForm;

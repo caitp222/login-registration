@@ -12,6 +12,7 @@ import {
 
 // components
 import LoginForm from './LoginForm';
+import RegisterForm from './RegisterForm'
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
       <BrowserRouter>
         <div className="container">
           <Route exact path="/" render={ () => <LoginForm /> }></Route>
+          <Route exact path="/register" render={ () => <RegisterForm /> }></Route>
         </div>
       </BrowserRouter>
     );
