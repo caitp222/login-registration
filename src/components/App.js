@@ -6,8 +6,7 @@ import '../styles/App.css';
 // routing components
 import {
   BrowserRouter,
-  Route,
-  NavLink
+  Route
 } from 'react-router-dom';
 
 // components

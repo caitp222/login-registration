@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // bootstrap components
 import {
@@ -14,7 +14,12 @@ const TextInput = (props) => (
       { props.input }
     </Col>
     <Col sm={4}>
-      <FormControl type="text" placeholder={ props.input } />
+      <FormControl
+        type="text"
+        placeholder={ props.input }
+        onChange={ props.handleOnChange }
+        name={ props.input.toLowerCase().replace(" ", "") }
+      />
     </Col>
   </FormGroup>
 )

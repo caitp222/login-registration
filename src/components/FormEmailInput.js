@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // bootstrap components
 import {
@@ -8,13 +8,18 @@ import {
   FormControl
 } from 'react-bootstrap';
 
-const EmailInput = () => (
+const EmailInput = (props) => (
   <FormGroup controlId="formHorizontalEmail">
     <Col componentClass={ControlLabel} sm={2} smOffset={3}>
       Email
     </Col>
     <Col sm={4}>
-      <FormControl type="email" placeholder="Email" />
+      <FormControl
+        type="email"
+        placeholder="Email"
+        name = "email"
+        onChange = { props.handleOnChange }
+      />
     </Col>
   </FormGroup>
 )

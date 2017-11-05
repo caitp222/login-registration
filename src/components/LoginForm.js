@@ -8,8 +8,6 @@ import {
   Form,
   FormGroup,
   Col,
-  ControlLabel,
-  FormControl,
   Checkbox,
   Button,
   Row,
@@ -24,9 +22,15 @@ class LoginForm extends Component {
   constructor() {
     super()
     this.state = {
-      userName: "",
-      password: ""
+      username: "",
+      password: "",
+      rememberMe: false
     }
+    this.handleOnChange = this.handleOnChange.bind(this)
+  }
+
+  handleOnChange(event) {
+    this.setState({[event.target.name]: event.target.value})
   }
 
   render() {
@@ -40,8 +44,11 @@ class LoginForm extends Component {
                   <h3>Welcome to the NYT Coding Challenge</h3>
                 </Col>
               </FormGroup>
-              <TextInput input={ "Username" }/>
-              <PasswordInput />
+              <TextInput
+                input={ "Username" }
+                handleOnChange={ this.handleOnChange }
+              />
+              <PasswordInput handleOnChange={ this.handleOnChange }/>
 
               <FormGroup>
                 <Col smOffset={5} sm={7}>

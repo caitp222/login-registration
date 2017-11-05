@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 // bootstrap components
 import {
@@ -14,7 +14,12 @@ const PasswordInput = (props) => (
       Password
     </Col>
     <Col sm={4}>
-      <FormControl type="password" placeholder="Password" />
+      <FormControl
+        type="password"
+        placeholder="Password"
+        name="password"
+        onChange = { props.handleOnChange }
+      />
     </Col>
   </FormGroup>
 )
