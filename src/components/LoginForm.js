@@ -27,10 +27,15 @@ class LoginForm extends Component {
       rememberMe: false
     }
     this.handleOnChange = this.handleOnChange.bind(this)
+    this.handleCheckboxChange = this.handleCheckboxChange.bind(this)
   }
 
   handleOnChange(event) {
     this.setState({[event.target.name]: event.target.value})
+  }
+
+  handleCheckboxChange(event) {
+    this.setState({rememberMe: event.target.checked})
   }
 
   render() {
@@ -48,14 +53,14 @@ class LoginForm extends Component {
                 input={ "Username" }
                 handleOnChange={ this.handleOnChange }
               />
-              <PasswordInput handleOnChange={ this.handleOnChange }/>
-
+              <PasswordInput
+                handleOnChange={ this.handleOnChange }
+              />
               <FormGroup>
                 <Col smOffset={5} sm={7}>
-                  <Checkbox>Remember me</Checkbox>
+                  <Checkbox name="rememberMe" onChange={this.handleCheckboxChange}>Remember me</Checkbox>
                 </Col>
               </FormGroup>
-
               <FormGroup>
                 <Col smOffset={5} sm={1}>
                   <Button type="submit">
@@ -67,12 +72,12 @@ class LoginForm extends Component {
           </Row>
           <Row sm={12}>
             <Col smOffset={5} sm={3}>
-              <p>New User? <Link to={{ pathname:"/register" }}>Register</Link></p>
+              <p>New User? <Link to={{ pathname: "/register" }}>Register</Link></p>
             </Col>
           </Row>
           <Row sm={12}>
             <Col smOffset={5} sm={3}>
-              <p>Forgot Password? Click here.</p>
+              <p>Forgot Password? Click <Link to={{ pathname: "/password-reset"}}>here</Link>.</p>
             </Col>
           </Row>
         </Grid>

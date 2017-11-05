@@ -37,6 +37,15 @@ class RegisterForm extends Component {
     this.setState({[event.target.name]: event.target.value})
   }
 
+  handleOnSubmit(event) {
+      // write this code!!!
+  }
+
+  validateInputs(inputs) {
+    inputs = this.state
+    
+  }
+
   render() {
     return (
       <div className="flexbox">
@@ -66,7 +75,6 @@ class RegisterForm extends Component {
           <PasswordInput
             handleOnChange = { this.handleOnChange }
           />
-
           <FormGroup>
             <Col smOffset={5} sm={7}>
               <Button type="submit">

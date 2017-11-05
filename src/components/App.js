@@ -6,7 +6,8 @@ import '../styles/App.css';
 // routing components
 import {
   BrowserRouter,
-  Route
+  Route,
+  Redirect
 } from 'react-router-dom';
 
 // components
@@ -17,9 +18,11 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="container">
+        <div className="router-container">
+          <Route exact path="/" render={ () => <Redirect to="/login"/> }></Route>
           <Route exact path="/login" render={ () => <LoginForm /> }></Route>
           <Route exact path="/register" render={ () => <RegisterForm /> }></Route>
+          <Route exact path="/password-reset" render={ () => <RegisterForm /> }></Route>
         </div>
       </BrowserRouter>
     );
