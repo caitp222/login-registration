@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+// router components
+import { Link } from 'react-router-dom';
+
 // bootstrap components
 import {
   Form,
@@ -25,8 +28,6 @@ class LoginForm extends Component {
       password: ""
     }
   }
-
-  
 
   render() {
     return (
@@ -59,7 +60,7 @@ class LoginForm extends Component {
           </Row>
           <Row sm={12}>
             <Col smOffset={5} sm={3}>
-              <p>New User? Click here.</p>
+              <p>New User? <Link to={{ pathname:"/register" }}>Register</Link></p>
             </Col>
           </Row>
           <Row sm={12}>

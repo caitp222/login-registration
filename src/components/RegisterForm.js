@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 // routing components
 import {
-  NavLink
+  Link
 } from 'react-router-dom';
 
 // bootstrap components
@@ -13,7 +13,9 @@ import {
   ControlLabel,
   FormControl,
   Checkbox,
-  Button
+  Button,
+  Grid,
+  Row
 } from 'react-bootstrap';
 
 // components
@@ -23,7 +25,9 @@ import PasswordInput from './FormPasswordInput';
 
 const RegisterForm = () => (
   <div className="flexbox">
-    <Form horizontal className="flexbox-item">
+    <Grid className="flexbox-item">
+    <Row sm={12}>
+    <Form horizontal>
       <FormGroup>
         <Col smOffset={4} sm={8}>
           <h3>Register with the NYT Coding Challenge</h3>
@@ -43,6 +47,13 @@ const RegisterForm = () => (
         </Col>
       </FormGroup>
     </Form>
+    </Row>
+    <Row sm={12}>
+      <Col smOffset={5} sm={3}>
+        <p>Already have an account? <Link to={{ pathname:"/login" }}>Login</Link></p>
+      </Col>
+    </Row>
+    </Grid>
   </div>
 )
 

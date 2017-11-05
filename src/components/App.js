@@ -19,7 +19,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="container">
-          <Route exact path="/" render={ () => <LoginForm /> }></Route>
+          <Route exact path="/login" render={ () => <LoginForm /> }></Route>
           <Route exact path="/register" render={ () => <RegisterForm /> }></Route>
         </div>
       </BrowserRouter>
