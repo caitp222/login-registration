@@ -22,8 +22,8 @@ import EmailInput from './FormEmailInput';
 import PasswordInput from './FormPasswordInput';
 
 const RegisterForm = () => (
-  <div className="form-wrapper">
-    <Form horizontal className="centered-form">
+  <div className="flexbox">
+    <Form horizontal className="flexbox-item">
       <FormGroup>
         <Col smOffset={4} sm={8}>
           <h3>Register with the NYT Coding Challenge</h3>
