@@ -1,0 +1,23 @@
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.flexbox-item {
+  margin: auto;
+  align-self: center;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: left;
+}
+
+p {
+  text-align: center;
+}
