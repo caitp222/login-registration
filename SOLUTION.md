@@ -9,6 +9,7 @@
 
 ** Notes
 
+- To start, I decided to use Facebook's boilerplate Create React App.
 - I first built the forms using Bootstrap's React components, then refactored the duplicated form components into their own smaller components to make cleaner code.
 - I then added some custom CSS to center the forms, but I kept the design as clean and simple as possible.
 - I used React Router for the routing as it's easy to use and I didn't anticipate any need for a custom router.
