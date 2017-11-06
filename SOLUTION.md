@@ -1,13 +1,13 @@
-#Caitlin Prentke's Front-End Coding Challenge
+# Caitlin Prentke's Front-End Coding Challenge
 
-##To run locally:
+## To run locally:
 
 - `cd nyt-coding-challenge`
 - `npm install`
 - `npm start`
 - By default, the app will run on localhost:3000.
 
-##Notes
+## Notes
 
 - To start, I decided to use Facebook's boilerplate Create React App. I figured it was the easiest way to get the app up and running so I could focus on the challenge.
 - I decided to use Bootstrap as their forms are styled very simply. At a quick glance, they look the most Times-like. I added some custom CSS to center the forms, but I kept the design as clean and simple as possible.
