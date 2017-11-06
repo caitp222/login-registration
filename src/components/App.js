@@ -13,6 +13,7 @@ import {
 // components
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm'
+import WelcomePage from './WelcomePage'
 
 class App extends Component {
   render() {
@@ -22,7 +23,8 @@ class App extends Component {
           <Route exact path="/" render={ () => <Redirect to="/login"/> }></Route>
           <Route exact path="/login" render={ () => <LoginForm /> }></Route>
           <Route exact path="/register" render={ () => <RegisterForm /> }></Route>
-          <Route exact path="/password-reset" render={ () => <RegisterForm /> }></Route>
+          <Route exact path="/password-reset" ></Route>
+          <Route exact path="/welcome-page" render={ () => <WelcomePage /> } ></Route>
         </div>
       </BrowserRouter>
     );
