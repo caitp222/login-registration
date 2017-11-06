@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 // router components
 import {
   Link,
+  Redirect,
   withRouter
  } from 'react-router-dom';
 
@@ -31,9 +32,12 @@ class LoginForm extends Component {
   constructor() {
     super()
     this.state = {
-      username: "",
-      password: "",
-      rememberme: false
+      user: {
+        username: "",
+        password: "",
+        rememberme: false
+      },
+      redirect: false
     }
     this.handleOnChange = this.handleOnChange.bind(this)
     this.handleCheckboxChange = this.handleCheckboxChange.bind(this)
@@ -41,7 +45,9 @@ class LoginForm extends Component {
   }
 
   handleOnChange(event) {
-    this.setState({[event.target.name]: event.target.value})
+    const user = { ...this.state.user }
+    user[event.target.name] = event.target.value
+    this.setState({user})
   }
 
   handleCheckboxChange(event) {
@@ -50,17 +56,20 @@ class LoginForm extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const user = this.state;
+    const user = this.state.user;
     const options = {
       method: 'POST',
       body: JSON.stringify(user)
     }
     fakeFetch("http://localhost:3000/sessions", options).then(
-       () => this.props.history.push("/welcome-page")
+      //  () => this.props.history.push("/welcome-page")
+      () => this.setState({ redirect: true })
      )
   }
 
   render() {
+    const redirect = this.state.redirect;
+
     return (
       <div className="flexbox">
         <Grid className="flexbox-item">
@@ -103,6 +112,7 @@ class LoginForm extends Component {
             </Col>
           </Row>
         </Grid>
+        { redirect && <Redirect to="/welcome-page" />}
       </div>
     )
   }
